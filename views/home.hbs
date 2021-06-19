@@ -1,0 +1,33 @@
+<main class="homepage">
+<!-- welcome starts -->
+    <section class="container-welcome">
+        <h1 class="title-welcome">Welcome to the Soundemic</h1>
+        <div class="img-welcome">
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+        </div>
+    </section>
+<!-- welcome ends -->
+
+<!-- buttons start -->
+    <section class="container-btn">
+        <button class="btn-login" onclick="document.getElementById('modalLogin').style.display='block'">Login</button>
+        <button class="btn-new-user" onclick="document.getElementById('modalNewUser').style.display='block'">New User</button>
+    </section>
+<!-- buttons end -->
+
+<!-- login modal starts -->
+    <section id="modalLogin" class="modal-login">
+        <span onclick="document.getElementById('modalLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        {{> login }}
+    </section>
+<!-- login modal ends -->
+
+<!-- new user modal starts -->
+    <section id="modalNewUser" class="modal-new-user">
+        <span onclick="document.getElementById('modalNewUser').style.display='none'" class="close" title="Close Modal">&times;</span>
+        
+        {{> new-user }}
+    </section>
+<!-- new user modal ends -->
+</main>
