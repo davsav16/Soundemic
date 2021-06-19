@@ -27,8 +27,14 @@
                 var modalNewUser = document.getElementById('modalNewUser');
                 // closes modal when the user clicks anywhere outside of the modal
                 window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
+                    if (event.target == modalLogin) {
+                        modalLogin.style.display = "none";
+                    }
+                }
+
+                window.onclick = function(event) {
+                    if (event.target == modalNewUser) {
+                        modalNewUser.style.display = "none";
                     }
                 }
             </script>
