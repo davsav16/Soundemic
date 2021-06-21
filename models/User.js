@@ -16,14 +16,52 @@ User.init(
             primaryKey: true,
             autoIncrement: true
         },
-        username: {
+        firstname: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        lastname: {
             type: DataTypes.STRING,
             allowNull: false
         },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            uni
+            unique: true,
+            validate: {
+                isEmail: true
+            }
+        },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+              len: [4]
+            }
+        },
+        socialSite: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            validate: {
+                isUrl: true
+            }
+        },
+        bio: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [8]
+            }
         }
-    }
-)
+    },
+
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'user'
+      }
+);
+
+module.exports = User;

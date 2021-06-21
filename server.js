@@ -6,14 +6,14 @@ const routes = require('./routes');
 
 const app = express();
 
-const PORT = 5000;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 app.use(session({
-  secret: "hhdoijfoea2wewqqsd",
+  secret: process.env.DB_SECRET,
   saveUninitialized: false,
   resave: false
 }));
