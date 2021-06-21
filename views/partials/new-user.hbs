@@ -1,0 +1,30 @@
+<form class="form">
+    <!-- new user fields start -->
+        <div class="fields">
+        <!-- username field -->
+            <div class="container-username">
+                <label class="label" for="username"><b>Username</b></label>
+                <input class="input" type="text" name="username" required>
+            </div>
+        <!-- email field -->
+            <div class="container-email">
+                <label class="label" for="email"><b>Email</b></label>
+                <input class="input" type="email" name="email" required>
+            </div>
+        <!-- password field -->
+            <div class="container-password">
+                <label class="label" for="password"><b>Password</b></label>
+                <input class="input" type="password" name="password" required>
+            </div>
+        <!-- new user button -->
+            <button id="btnNewUser" class="btn-new-user" type="submit">Submit</button>
+        </div>
+    <!-- new user fields end -->
+                                            
+    <!-- other options start -->
+        <div class="options">
+        <!-- cancel button -->
+            <button type="button" onclick="document.getElementById('modalNewUser').style.display='none'" class="btn-cancel">Cancel</button>
+        </div>
+    <!-- other options end -->
+</form>

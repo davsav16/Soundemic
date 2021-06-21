@@ -1,28 +1,33 @@
+<main class="homepage">
+<!-- welcome starts -->
+    <section class="container-welcome">
+        <h1 class="title-welcome">Welcome to the Soundemic</h1>
+        <div class="img-welcome">
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+        </div>
+    </section>
+<!-- welcome ends -->
 
+<!-- buttons start -->
+    <section class="container-btn">
+        <button class="btn-login" onclick="document.getElementById('modalLogin').style.display='block'">Login</button>
+        <button class="btn-new-user" onclick="document.getElementById('modalNewUser').style.display='block'">New User</button>
+    </section>
+<!-- buttons end -->
 
-<div class="container my-5">
+<!-- login modal starts -->
+    <section id="modalLogin" class="modal-login">
+        <span onclick="document.getElementById('modalLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
 
-  <h1 class="text-center">Home Page</h1>
+        {{> login }}
+    </section>
+<!-- login modal ends -->
 
-  <hr>
-
-  <h3>Page Views: {{views}}</h3>
-
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum nobis aut ex eveniet sint atque nulla animi,
-    molestiae ipsam, quaerat ducimus quos natus esse ab? Provident pariatur laborum facere laudantium. Lorem ipsum dolor
-    sit amet consectetur adipisicing elit. Consectetur excepturi quae quidem ea vitae debitis inventore qui odio,
-    distinctio vel tempore ullam molestias sed. Similique deserunt nisi velit ea? Dolores. Lorem ipsum dolor, sit amet
-    consectetur adipisicing elit. Placeat non consequatur possimus veniam laboriosam accusantium repellendus. Iure
-    ducimus numquam libero ipsum. Accusantium, ab quae corporis odit libero unde optio architecto.
-  </p>
-
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum nobis aut ex eveniet sint atque nulla animi,
-    molestiae ipsam, quaerat ducimus quos natus esse ab? Provident pariatur laborum facere laudantium. Lorem ipsum dolor
-    sit amet consectetur adipisicing elit. Consectetur excepturi quae quidem ea vitae debitis inventore qui odio,
-    distinctio vel tempore ullam molestias sed. Similique deserunt nisi velit ea? Dolores. Lorem ipsum dolor, sit amet
-    consectetur adipisicing elit. Placeat non consequatur possimus veniam laboriosam accusantium repellendus. Iure
-    ducimus numquam libero ipsum. Accusantium, ab quae corporis odit libero unde optio architecto.
-  </p>
-</div>
+<!-- new user modal starts -->
+    <section id="modalNewUser" class="modal-new-user">
+        <span onclick="document.getElementById('modalNewUser').style.display='none'" class="close" title="Close Modal">&times;</span>
+        
+        {{> new-user }}
+    </section>
+<!-- new user modal ends -->
+</main>
