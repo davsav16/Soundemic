@@ -1,9 +1,11 @@
 // import routes
 const router = require('express').Router();
 const apiRoutes = require('./api');
+const homeRoutes = require('./homeroutes.js');
 
 // prefix routes
 router.use('/api', apiRoutes);
+router.use('/', homeRoutes);
 
 // send error message for wrong routes
 router.use((req, res) => {

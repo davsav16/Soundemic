@@ -1,4 +1,3 @@
-const Todo = require('./todo');
 const User = require('./User');
 const Post = require('./Post');
 
@@ -10,4 +9,4 @@ Post.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { Todo, User, Post };
+module.exports = { User, Post };
