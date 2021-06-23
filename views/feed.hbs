@@ -1,0 +1,30 @@
+<main class="feed">
+    <!-- header starts -->
+    <header class="header">
+        <h2>Feed</h2>
+    </header>
+    <!-- header ends -->
+    
+    <!-- posts start -->
+        <section class="feed">
+            {{> posts }}
+        </section>
+    <!-- posts end -->
+
+    <!-- navigation starts -->
+        <nav class="nav">
+            <div>
+                <a href="#home"></a>
+            </div>
+            <button class="btn-new-post" onclick="document.getElementById('modalNewPost').style.display='block'">Create Post</button>
+        </nav>
+    <!-- navigation ends -->
+
+    <!-- new-post modal starts -->
+        <section id="modalNewPost" class="modal-new-post">
+            <span onclick="document.getElementById('modalNewPost').style.display='none'" class="close" title="Close Modal">&times;</span>
+            
+            {{> new-post }}
+        </section>
+    <!-- new-post modal ends -->
+</main>
