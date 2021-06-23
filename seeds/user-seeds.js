@@ -4,19 +4,19 @@ const { User } = require('../models');
 // array of data for User class
 const userData = [
   {
-    username: 'Narumi',
+    username: 'Musicman123',
     password: 'Password1'
   },
   {
-    username: 'Hirotaka',
+    username: 'MusicKing95',
     password: 'Password2'
   },
   {
-    username: 'Koyanagi',
+    username: 'ImagineDragonsLover',
     password: 'Password3'
   },
   {
-    username: 'Kabakura',
+    username: 'Songsaremyjams33',
     password: 'Password4'
   }
 ];
