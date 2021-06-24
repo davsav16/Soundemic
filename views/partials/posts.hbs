@@ -1,15 +1,22 @@
-<div id="post" class="post">
-    <div id="userInfo" class="user-info">
-        <h4 id="postUsername" class="post-username">Username</h4>
-        <p id="postLocation" class="post-username">Location</p>
-        <p id="postTime" class="post-username">Time</p>
-    </div>
-    <div id="postImg" class="post-img">
-        <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
-    </div>
-    <div id="postBody" class="post-body">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam vulputate ut pharetra sit amet. Eu nisl nunc mi ipsum.
-        </p>
-    </div>
-</div>
+<ol class="post-list">
+    {{#each posts as |post|}}
+    <li>
+        <article class="post">
+            <div>
+                <p>{{post.user.username}}</p>
+                <p>{{post.created_at}}</p>
+            </div>
+            <div>
+                <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+            </div>
+            <div class="meta">
+                <p>♫<span>{{post.vote_count}}</span></p>
+                <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
+                <span>({{post.post_url}})</span>
+                <p>{{ post.content }}</p>
+                <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+            </div>
+        </article>
+    </li>
+    {{/each}}
+</ol>
