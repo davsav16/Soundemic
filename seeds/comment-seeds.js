@@ -4,27 +4,27 @@ const { Comment } = require('../models');
 // array of data for Comment class
 const commentData = [
   {
-    comment: `I found the content relatable. Eager to try this for my next project.`,
+    comment: `I found the music relatable. Eager to listen to more`,
     user_id: '4',
     post_id: '1'
   },
   {
-    comment: `Insomnia! I used Insomia during my studies, so I might be biased.`,
+    comment: `I love this band!`,
     user_id: '4',
     post_id: '2'
   },
   {
-    comment: `Great arguments for both sides. I personally love them, but to each their own.`,
+    comment: `This is going on my playlist for sure!`,
     user_id: '1',
     post_id: '5'
   },
   {
-    comment: `Can't wait to try these out!`,
+    comment: `Can't wait to listen to this albulm!`,
     user_id: '3',
     post_id: '4'
   },
   {
-    comment: `I've used both, but my preference is Postman.`,
+    comment: `I like the alternative rock genre`,
     user_id: '2',
     post_id: '2'
   }
