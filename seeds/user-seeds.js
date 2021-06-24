@@ -17,7 +17,7 @@ const userData = [
     email: 'sarah.jimenez12345@gmail.com',
     password: 'Password2',
     socialSite: 'Github', 
-    bio: 'I like to pop and lock hit me up if to jam out and dance to your favorite jam!',
+    bio: 'I like to pop and lock hit me up if you want to jam out and dance to your favorite jam!',
   },
   {
     firstName: 'Kate',
