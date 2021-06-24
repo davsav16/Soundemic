@@ -5,35 +5,23 @@ class Post extends Model {}
 
 Post.init(
     {
-        id: {
+        title: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        artist: {
+        comment: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        musicVid_url: {
+        userid: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 isUrl: true
             }
         },
-        genre: {
-            type: DataTypes.STRING,
-            allowNull:false
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'user',
-                key: 'id'
-            }
-        }
-
     },
     {
       sequelize,
