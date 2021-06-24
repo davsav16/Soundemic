@@ -1,9 +1,17 @@
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const sequelize = require('../../config/connection');
+const { Post, User, Vote } = require('../../models');
 
 router.get('/', (req, res) => {
     Post.findAll({
-        attributes: ['title', 'comment', 'user_id'],
+        attributes: [
+            'id', 
+            'artist', 
+            'title',
+            'genre', 
+            'created_at',
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+        ],
         order: [['created_at', 'DESC']],
         include: [
             {
@@ -24,7 +32,14 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['title', 'comment', 'user_id'],
+        attributes: [
+            'id', 
+            'artist', 
+            'title',
+            'genre', 
+            'created_at',
+            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+        ],
         include: [
             {
                 model: User,
@@ -48,7 +63,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     Post.create({
         artist: req.body.artist,
-        musicVid_url: req.body.musicVid_url,
+        title: req.body.title,
         genre: req.body.genre,
         user_id: req.body.user_id
     })
@@ -59,11 +74,20 @@ router.post('/', (req, res) => {
     });
 });
 
+router.put('/upvote', (req, res) => {
+    Post.upvote(req.body, { Vote })
+      .then(updatedPostData => res.json(updatedPostData))
+      .catch(err => {
+        console.log(err);
+        res.status(400).json(err);
+      });
+  });
+
 router.put('/:id', (req, res) => {
     Post.update(
         {
             artist: req.body.artist,
-            musicVid_url: req.body.musicVid_url,
+            title: req.body.title,
             genre: req.body.genre
         }, 
         {
