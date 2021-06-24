@@ -1,0 +1,24 @@
+<main class="user-page">
+    <header class="header-user">
+        <h1>Hi {{ user.firstName }}</h1>
+    </header>
+    <section class="user-account-info">
+        <div>
+            <h3>Account Info</h3>
+            <div>
+                <p>{{ user.firstName }}</p>
+                <p>{{ user.lastName }}</p>
+                <p>{{ user.userName }}</p>
+                <p>{{ user.email }}</p>
+            </div>
+        </div>
+        <div class="user-about-me">
+            <h3>About Me</h3>
+            <div>
+                <p>{{ user.bio }}</p>
+                <p>{{ user.musicGenre }}</p>
+                <p>{{ user.linkedAccount }}</p>
+            </div>
+        </div>
+    </section>
+</main>

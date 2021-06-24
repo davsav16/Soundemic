@@ -10,4 +10,8 @@ router.get('/feed', (req, res) => {
   res.render('feed');
 });
 
+router.get('/user', (req, res) => {
+  res.render('user');
+});
+
 module.exports = router;
