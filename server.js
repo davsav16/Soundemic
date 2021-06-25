@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const routes = require('./controllers/');
+const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
@@ -15,8 +15,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
-
-
 // app.use(session({
 //   secret: process.env.DB_SECRET,
 //   saveUninitialized: false,
@@ -28,7 +26,7 @@ app.set('view engine', 'hbs'); // setting up default view engine
 
 
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, function() {
     console.log('App listening on PORT ' + PORT);
   });
