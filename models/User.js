@@ -40,12 +40,9 @@ User.init(
               len: [4]
             }
         },
-        socialSite: {
+        musicGenre: {
             type: DataTypes.STRING,
-            allowNull: true,
-            validate: {
-                isUrl: true
-            }
+            allowNull:false
         },
         bio: {
             type: DataTypes.STRING,
