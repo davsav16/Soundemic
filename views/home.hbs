@@ -1,16 +1,22 @@
-<main class="homepage">
+<main class="homepage w-full">
     <!-- logo starts -->
-        <section>
-            <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+        <section class="my-20">
+            <a href="https://placeholder.com"><img src="/stylesheets/svg/Dark-mode-logo.svg"></a>
         </section>
     <!-- logo ends -->
 
     <!-- buttons start -->
-        <section class="container-btn">
-            <button class="btn-sign-in" onclick="document.getElementById('modalSignIn').style.display='block'">Sign In</button>
-            <button class="btn-sign-in" onclick="document.getElementById('modalSignUp').style.display='block'">Sign Up</button>
-            <button id="btnFacebook" class="btn-facebook">Sign in with Facebook</button>
+        <section class="container-btn flex-col">
+            <div>
+                <button class="btn-sign-in mt-8 mb-4" onclick="document.getElementById('modalSignIn').style.display='none'">Sign In</button>
+            </div>
+
+            <div>
+                <button class="btn-sign-up mb-4" onclick="document.getElementById('modalSignUp').style.display='none'">Sign Up</button>
+            </div>    
+            {{!-- <button id="btnFacebook" class="btn-facebook">Sign in with Facebook</button> --}}
         </section>
+ 
     <!-- buttons end -->
 
     <!-- sign-in modal starts -->
