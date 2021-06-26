@@ -61,7 +61,7 @@ router.post('/', (req, res) => {
         lastName: req.body.lastName,
         email: req.body.email,
         password: req.body.password,
-        socialSite: req.body.socialSite,
+        musicGenre: req.body.musicGenre,
         bio: req.body.bio
       })
         .then(dbUserData => res.json(dbUserData))
