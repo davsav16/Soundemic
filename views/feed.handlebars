@@ -20,10 +20,12 @@
 
     <!-- navigation starts -->
         <nav class="nav">
-            <div>
-                <a href="#home"></a>
-            </div>
+            {{#if loggedIn}}
+            <a href="/dashboard">Account</a>
             <button class="btn-new-post" onclick="document.getElementById('modalNewPost').style.display='block'">Create Post</button>
+            {{else}}
+            <a href="/">Login/Sign-Up</a>
+            {{/if}}
         </nav>
     <!-- navigation ends -->
 

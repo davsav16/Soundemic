@@ -19,5 +19,14 @@
                 <p>{{ user.musicGenre }}</p>
             </div>
         </div>
+        <div>
+            <button id="btnLogout" class="btnLogout">Logout</button>
+        </div>
     </section>
 </main>
+
+<!-- js/scripts start -->
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+<!-- js/scripts end -->
