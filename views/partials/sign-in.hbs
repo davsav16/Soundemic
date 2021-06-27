@@ -1,14 +1,13 @@
-<div class="container">
-<form>
+<form class="container text-center py-11 relative">
     <!-- sign in fields start -->
         <div class="fields">
         <!-- email field -->
             <div class="container-email my-4">
-                <input class="input shadow-inner" type="email" name="email" placeholder="Email/Username" required>
+                <input class="input shadow-inner shadow-lg" type="email" name="email" placeholder="Email/Username" required>
             </div>
         <!-- password field -->
             <div class="container-password">
-                <input class="input shadow-inner" type="password" name="password" placeholder="Password" required>
+                <input class="input shadow-inner mb-6" type="password" name="password" placeholder="Password" required>
             </div>
         </div>
     <!-- sign in fields end -->
@@ -19,14 +18,14 @@
             <div>
                 <button id="btnSignIn" class="btn-dark-mode my-6" type="submit">Welcome Back</button>
             </div>
-            <label>
+            <label class="absolute bottom-0 left-20">
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
-            <span class="psw"><a href="#">Forgot Password</a></span>
+            <span class="psw absolute bottom-0 right-20"><a href="#">Forgot Password</a></span>
         </div>
     <!-- options end -->
 </form>
 
 
-    <script src="/javascript/login.js"></script>
 
+    <script src="/javascript/login.js"></script>
