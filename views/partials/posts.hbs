@@ -3,16 +3,17 @@
     <li>
         <article class="post">
             <div>
-                <p>{{post.user.username}}</p>
-                <p>{{post.created_at}}</p>
+                <p>{{post.artist}}</p>
+                <p>{{post.title}}</p>
+                <p>{{post.genre}}</p>
+                by {{post.user.firstName}} {{post.user.lastName}} on
+                    {{post.created_at}}
             </div>
             <div>
                 <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
             </div>
             <div class="meta">
                 <p>♫<span>{{post.vote_count}}</span></p>
-                <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-                <span>({{post.post_url}})</span>
                 <p>{{ post.content }}</p>
                 <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
             </div>
@@ -20,3 +21,5 @@
     </li>
     {{/each}}
 </ol>
+
+    

@@ -2,30 +2,31 @@
     <!-- sign-up fields start -->
         <div class="fields">
         <!-- first-name field -->
-            <div class="container-first-name my-4">
-                <input class="input" type="text" name="first-name" placeholder="First Name">
+            <div class="container-first-name">
+                <input class="input" type="text" id="first-name-signup" placeholder="First Name">
             </div>
         <!-- last-name field -->
             <div class="container-last-name">
-                <input class="input mb-4" type="text" name="last-name" placeholder="Last Name">
+                <input class="input" type="text" id="last-name-signup" placeholder="Last Name">
             </div>
         <!-- bio field -->
             <div class="container-bio">
-                <input class="input mb-4" type="text" name="bio" placeholder="Bio">
-            </div>
-        <!-- username field -->
-            <div class="container-username">
-                <input class="input mb-4" type="text" name="username" placeholder="Username" required>
+                <input class="input" type="text" id="bio-signup" placeholder="Bio">
             </div>
         <!-- email field -->
             <div class="container-email">
-                <input class="input mb-4" type="email" name="email" placeholder="Email" required>
+                <input class="input" type="email" id="email-signup" placeholder="Email" required>
+
             </div>
         <!-- password field -->
             <div class="container-password">
                 <input class="input mb-6" type="password" name="password" placeholder="Password" required>
             </div>
         <!-- music genre field -->
+            <div class="container-genre">
+                <input class="input" type="text" id="genre-signup" placeholder="Favorite Genre" required>
+            </div>
+
             {{!-- <select class="music-genre" aria-label="Default select example">
                 <option selected>Select Music Genre</option>
                 <option value="1">Rock</option>
@@ -43,3 +44,5 @@
         </div>
     <!-- other options end -->
 </form>
+
+<script src="/javascript/login.js"></script>

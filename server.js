@@ -15,8 +15,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
-
-
 // app.use(session({
 //   secret: process.env.DB_SECRET,
 //   saveUninitialized: false,
