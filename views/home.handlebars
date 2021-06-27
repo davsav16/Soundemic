@@ -1,18 +1,18 @@
 <main class="homepage">
     <!-- logo starts -->
         <section class="my-20">
-            <a href="https://placeholder.com"><img src="/stylesheets/svg/Dark-mode-logo.svg"></a>
+            <a href="/"><img src="/stylesheets/svg/Dark-mode-logo.svg"></a>
         </section>
     <!-- logo ends -->
 
     <!-- buttons start -->
         <section class="container-btn">
             <div class="text-center">
-                <button class="btn-sign-in mb-4" onclick="document.getElementById('modalSignIn').style.display='none'">Sign In</button>
+                <button class="btn-sign-in mb-4" onclick="document.getElementById('modalSignIn').style.display='block'">Sign In</button>
             </div>
 
             <div class="text-center">
-                <button class="btn-sign-up" onclick="document.getElementById('modalSignUp').style.display='none'">Sign Up</button>
+                <button class="btn-sign-up" onclick="document.getElementById('modalSignUp').style.display='block'">Sign Up</button>
             </div>    
             {{!-- <button id="btnFacebook" class="btn-facebook">Sign in with Facebook</button> --}}
         </section>
@@ -22,7 +22,7 @@
 
     <!-- sign-in modal starts -->
         <section id="modalSignIn" class="modal-sign-in text-center">
-            <span onclick="document.getElementById('modalSignIn').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('modalSignIn').style.display='none'" class="close" title="Close Modal">X</span>
 
             {{> sign-in }}
         </section>
@@ -30,9 +30,9 @@
 
     <!-- sign-up modal starts -->
         <section id="modalSignUp" class="modal-sign-up text-center">
-            <span onclick="document.getElementById('modalSignUp').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('modalSignUp').style.display='none'" class="close" title="Close Modal">X</span>
             
-            {{ sign-up }}
+            {{> sign-up }}
         </section>
     <!-- sign-up modal ends -->
 </main>
