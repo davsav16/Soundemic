@@ -69,3 +69,7 @@ img {
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
+
+.modal-sign-in, .modal-sign-up {
+    display: none;
+}
