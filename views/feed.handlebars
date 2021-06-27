@@ -7,7 +7,14 @@
     
     <!-- posts start -->
         <section class="feed">
-            {{> posts }}
+            <ol class="post-list">
+                <!-- posts array -->
+                {{#each posts as |post|}}
+                <li>
+                    {{> post-info post }}
+                </li>
+                {{/each}}
+            </ol>
         </section>
     <!-- posts end -->
 

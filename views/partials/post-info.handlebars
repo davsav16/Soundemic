@@ -1,13 +1,9 @@
-<ol class="post-list">
-    {{#each posts as |post|}}
-    <li>
         <article class="post">
             <div>
                 <p>{{post.artist}}</p>
                 <p>{{post.title}}</p>
                 <p>{{post.genre}}</p>
-                by {{post.user.firstName}} {{post.user.lastName}} on
-                    {{post.created_at}}
+                <p>{{post.user.firstName}} {{post.user.lastName}} on {{post.created_at}}</p>
             </div>
             <div>
                 <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
@@ -18,8 +14,5 @@
                 <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
             </div>
         </article>
-    </li>
-    {{/each}}
-</ol>
 
     

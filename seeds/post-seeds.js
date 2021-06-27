@@ -6,13 +6,13 @@ const postData = [
   {
     artist: 'lilwayne',
     title: `balk opps`,
-    genre: 'rock',
+    genre: 'Rock',
     user_id: '1'
   },
   {
     artist: 'johnyboy',
     title: `live it up`,
-    genre: 'rock',
+    genre: 'Rock',
     user_id: '1'
   }
 ];
