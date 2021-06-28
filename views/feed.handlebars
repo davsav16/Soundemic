@@ -1,43 +1,39 @@
 <main class="feed">
-    <!-- header starts -->
-    <header class="header">
-        <h2>Feed</h2>
-    </header>
-    <!-- header ends -->
+    <!-- posts start -->
+        <section class="feed flex flex-col justify-center">
+            <header class="header py-6"><h2>Feed</h2></header>
+              <ol>
+                {{#each posts}}
+                  <li>
+                    <article class="post">
+                     <div>
+                      <h3>{{user.firstName}} {{user.lastName}} </h3>
+                      <h4>{{created_at}}</h4>
+                      <div class="album"><img src="/stylesheets/svg/album.jpg"></div>
 
-        <ol>
-            {{#each posts}}
-            <li>
-                <article class="post">
-                <div>
-                    <p>{{artist}}</p>
-                    <p>{{title}}</p>
-                    <p>{{genre}}</p>
-                    <p>{{user.firstName}} {{user.lastName}} on {{created_at}}</p>
-                </div>
-                <div>
-                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
-                </div>
-                <div class="meta">
-                    <p>♫<span>{{vote_count}}</span></p>
-                    <p>{{ content }}</p>
-                    <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
-                </div>
-        </article>
-
-            </li>
+                        <div class="post-content flex-row">
+                          <p>{{artist}}</p>
+                          <p>{{title}}</p>
+                           </div>
+               
+                        <div class="comment-box">
+                      <input class="input" type="text" id="comment" placeholder="All the great things about this song..">
+                      </div>
+                      </div>
+                    </article>
+                </li>
             {{/each}}
         </ol>
+ 
+        </section>
+
     <!-- posts end -->
 
     <!-- navigation starts -->
-        <nav class="nav">
-            {{#if loggedIn}}
-            <a href="/dashboard">Account</a>
-            <button class="btn-new-post" onclick="document.getElementById('modalNewPost').style.display='block'">Create Post</button>
-            {{else}}
-            <a href="/">Login/Sign-Up</a>
-            {{/if}}
+        <nav class="nav flex">
+            <img src="/stylesheets/svg/nav-icon-03.svg" class="nav-icon self-center">
+           
+            <button class="btn-new-post py-2 " onclick="document.getElementById('modalNewPost').style.display='block'">Create Post</button>
         </nav>
     <!-- navigation ends -->
 

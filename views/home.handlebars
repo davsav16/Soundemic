@@ -1,7 +1,7 @@
 <main class="homepage">
     <!-- logo starts -->
         <section class="my-20">
-            <a href="/"><img src="/stylesheets/svg/Dark-mode-logo.svg"></a>
+            <a href="https://placeholder.com"><img src="/stylesheets/svg/Dark-mode-logo.svg" class="logo"></a>
         </section>
     <!-- logo ends -->
 
@@ -21,16 +21,16 @@
 
 
     <!-- sign-in modal starts -->
-        <section id="modalSignIn" class="modal-sign-in text-center">
-            <span onclick="document.getElementById('modalSignIn').style.display='none'" class="close" title="Close Modal">X</span>
+        <section id="modalSignIn" class="modal-sign-in">
+            <span onclick="document.getElementById('modalSignIn').style.display='none'" class="close" title="Close Modal">&times;</span>
 
             {{> sign-in }}
         </section>
     <!-- sign-in modal ends -->
 
     <!-- sign-up modal starts -->
-        <section id="modalSignUp" class="modal-sign-up text-center">
-            <span onclick="document.getElementById('modalSignUp').style.display='none'" class="close" title="Close Modal">X</span>
+        <section id="modalSignUp" class="modal-sign-up">
+            <span onclick="document.getElementById('modalSignUp').style.display='none'" class="close" title="Close Modal">&times;</span>
             
             {{> sign-up }}
         </section>
