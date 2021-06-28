@@ -1,37 +1,32 @@
 <main class="feed">
-    <!-- header starts -->
-    
-    <!-- header ends -->
-    
     <!-- posts start -->
         <section class="feed flex flex-col justify-center">
             <header class="header py-6"><h2>Feed</h2></header>
-          <article class="post">
-            <div>
-                <h3>Nathaly Calderon {{post.user.firstName}} {{post.user.lastName}} </h3>
-                <h4>6/27/2020{{post.created_at}}</h4>
-                <div class="album"><img src="/stylesheets/svg/album.jpg"></div>
+              <ol>
+                {{#each posts}}
+                  <li>
+                    <article class="post">
+                     <div>
+                      <h3>{{user.firstName}} {{user.lastName}} </h3>
+                      <h4>{{created_at}}</h4>
+                      <div class="album"><img src="/stylesheets/svg/album.jpg"></div>
 
-                <div class="post-content flex-row">
-                    <p>Dirty Heads{{post.artist}}</p>
-                    <p>Crow Bar Hotel{{post.title}}</p>
-                </div>
+                        <div class="post-content flex-row">
+                          <p>{{artist}}</p>
+                          <p>{{title}}</p>
+                           </div>
                
-                <div class="comment-box">
-                <input class="input" type="text" id="comment" placeholder="All the great things about this song..">
-                </div>
-            </div>
-        </article>
-        
-            <ol class="post-list">
-                <!-- posts array -->
-                {{#each posts as |post|}}
-                <li>
-                    {{> post-info post }}
+                        <div class="comment-box">
+                      <input class="input" type="text" id="comment" placeholder="All the great things about this song..">
+                      </div>
+                      </div>
+                    </article>
                 </li>
-                {{/each}}
-            </ol>
+            {{/each}}
+        </ol>
+ 
         </section>
+
     <!-- posts end -->
 
     <!-- navigation starts -->
@@ -53,3 +48,5 @@
         </section>
     <!-- new-post modal ends -->
 </main>
+
+<script src="/javascript/add-post.js"></script>
