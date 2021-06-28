@@ -43,8 +43,8 @@ router.get('/feed', (req, res) => {
   });
 });
 
-router.get('/user', (req, res) => {
-  res.render('user');
+router.get('/dashboard', (req, res) => {
+  res.render('dashboard');
 });
 
 module.exports = router;

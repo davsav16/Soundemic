@@ -11,19 +11,19 @@ const sequelize = require('../config/connection');
 const seedAll = async () => {
 
   await sequelize.sync({ force: true });
-  console.log('\n----- DATABASE SYNCED -----\n');
+  console.log('----- DATABASE SYNCED -----');
 
   await seedUsers();
-  console.log('\n----- USERS SEEDED -----\n');
+  console.log('----- USERS SEEDED -----');
   
   await seedPosts();
-  console.log('\n----- POSTS SEEDED -----\n');
+  console.log('----- POSTS SEEDED -----');
   
   await seedComments();
-  console.log('\n----- COMMENTS SEEDED -----\n');
+  console.log('----- COMMENTS SEEDED -----');
 
   await seedVotes();
-  console.log('\n----- VOTES SEEDED -----\n');
+  console.log('----- VOTES SEEDED -----');
 
   process.exit(0);
 };
