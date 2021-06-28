@@ -7,6 +7,19 @@ router.get('/', (req, res) => {
 });
 
 router.get('/feed', (req, res) => {
+  // res.render('feed', {
+  //   id: 1,
+  //   artist: 'don',
+  //   title: 'Yolo',
+  //   genre: 'rock',
+  //   created_at: new Date(),
+  //   vote_count: 10,
+  //   comments: [{}, {}],
+  //   user: {
+  //     firstName: 'Juan',
+  //     lastName: 'McDougal'
+  //   }
+  // })
   Post.findAll({
     attributes: [
       'id',
@@ -33,10 +46,9 @@ router.get('/feed', (req, res) => {
   })
   .then(dbPostData => {
     const posts = dbPostData.map(post => post.get({ plain: true }));
-    res.render('feed', {
-      posts,
-      loggedIn: req.session.loggedIn
-    });
+    res.render('feed', {posts} )
+    // const posts = dbPostData.map(post => post.get({ plain: true }));
+    // res.render('feed', { posts });
   })
   .catch(err => {
     console.log(err);

@@ -4,18 +4,30 @@
         <h2>Feed</h2>
     </header>
     <!-- header ends -->
-    
-    <!-- posts start -->
-        <section class="feed">
-            <ol class="post-list">
-                <!-- posts array -->
-                {{#each posts as |post|}}
-                <li>
-                    {{> post-info post }}
-                </li>
-                {{/each}}
-            </ol>
-        </section>
+
+        <ol>
+            {{#each posts}}
+            <li>
+                <article class="post">
+                <div>
+                    <p>{{artist}}</p>
+                    <p>{{title}}</p>
+                    <p>{{genre}}</p>
+                    <p>{{user.firstName}} {{user.lastName}} on {{created_at}}</p>
+                </div>
+                <div>
+                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
+                </div>
+                <div class="meta">
+                    <p>♫<span>{{vote_count}}</span></p>
+                    <p>{{ content }}</p>
+                    <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+                </div>
+        </article>
+
+            </li>
+            {{/each}}
+        </ol>
     <!-- posts end -->
 
     <!-- navigation starts -->
@@ -40,3 +52,5 @@
         </section>
     <!-- new-post modal ends -->
 </main>
+
+<script src="/javascript/add-post.js"></script>
