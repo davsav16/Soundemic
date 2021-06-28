@@ -8,9 +8,9 @@ async function signupFormHandler(event) {
     const bio = document.querySelector('#bio-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-    const genre = document.querySelector('#genre-signup').value.trim();
+    const musicGenre = document.querySelector('#genre-signup').value.trim();
   
-    if (firstName && lastName && bio && email && password && genre) {
+    if (firstName && lastName && bio && email && password && musicGenre) {
         fetch('/api/users', {
             method: 'POST',
             body: JSON.stringify({
@@ -19,7 +19,7 @@ async function signupFormHandler(event) {
                 bio,
                 email,
                 password,
-                genre
+                musicGenre
             }),
             headers: { 'Content-Type': 'application/json' }
         });
