@@ -7,19 +7,6 @@ router.get('/', (req, res) => {
 });
 
 router.get('/feed', (req, res) => {
-  // res.render('feed', {
-  //   id: 1,
-  //   artist: 'don',
-  //   title: 'Yolo',
-  //   genre: 'rock',
-  //   created_at: new Date(),
-  //   vote_count: 10,
-  //   comments: [{}, {}],
-  //   user: {
-  //     firstName: 'Juan',
-  //     lastName: 'McDougal'
-  //   }
-  // })
   Post.findAll({
     attributes: [
       'id',
