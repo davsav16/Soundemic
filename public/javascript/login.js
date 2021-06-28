@@ -1,5 +1,5 @@
 async function loginFormHandler(event) {
-    event.stopImmediatePropagation();
+    event.preventDefault();
   
     console.log('login btn pressed');
 
@@ -25,4 +25,4 @@ async function loginFormHandler(event) {
     }
 }
 
-document.querySelector('#btnSignIn').addEventListener('submit', loginFormHandler);
+document.querySelector('#formSignIn').addEventListener('submit', loginFormHandler);
