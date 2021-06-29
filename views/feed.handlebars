@@ -7,14 +7,16 @@
                   <li>
                     <article class="post">
                      <div>
-                      <h3>{{user.firstName}} {{user.lastName}} </h3>
+                      <h3>test{{user.firstName}} {{user.lastName}} </h3>
                       <h4>{{created_at}}</h4>
                       <div class="album"><img src="/stylesheets/svg/album.jpg"></div>
 
                         <div class="post-content flex-row">
-                          <p>{{artist}}</p>
-                          <p>{{title}}</p>
-                        </div>
+
+                          <p>Artist:{{artist}}</p>
+                          <p>Song Title:{{title}}</p>
+                           </div>
+
                       </div>
                     </article>
                 </li>
@@ -27,8 +29,7 @@
 
     <!-- navigation starts -->
         <nav class="nav flex">
-            <img src="/stylesheets/svg/nav-icon-03.svg" class="nav-icon self-center">
-           
+
             <button class="btn-new-post py-2 " onclick="document.getElementById('modalNewPost').style.display='block'">Create Post</button>
         </nav>
     <!-- navigation ends -->
