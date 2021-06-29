@@ -2,33 +2,6 @@ const passport = require('passport');
 const GitHubStrategy = require('passport-github').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy; 
 const api = require('/index.js');
-var session = require('express-session')
-
-var app = express()
-app.set('trust proxy', 1) // trust first proxy
-app.use(session({
-  secret: '',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { 
-        path:'/',
-        secure: false,
-        maxAge: null  
-     }
-}))
-
-
-app.use(passport.initialize()); 
-app.use(passport.session()); 
-
-passport.serializeUser(function (user,clientID) {
-    clientID(null, user.id);
-}); 
-
-passport.derializeUser(function (id,clientID) {
-    clientID(null, id);
-}); 
-
 
 passport.use(new GitHubStrategy ({
     clientID:b298404790358d6d3b61, 
@@ -42,3 +15,15 @@ function(accessToken, refreshToken, profile, cb) {
     });
   }
 ));   
+
+passport.use(new GoogleStrategy ({
+    clientID:711862264937-ihpa5t32lbj4vs7n0rvs309dm3sm3hg3.apps.googleusercontent.com, 
+    clientSecret:Q5ttN2QzlQBF1VcdGlv1tirz, 
+    callbackURL:'/auth/google/redirect'
+},
+function(accessToken, refreshToken, profile, cb) {
+    User.findOrCreate({ googleId: profile.id }, function (err, user) {
+      return cb(err, user);
+    });
+  }
+));
