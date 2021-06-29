@@ -202,16 +202,6 @@ nav {
     margin: auto;
 }
 
-<<<<<<< HEAD
-.container-btn {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-}
-
-.modal-sign-in, .modal-sign-up {
-    display: none;
-}
-=======
 .post-content {
     background: rgb(0,0,93);
     background: linear-gradient(158deg, rgba(0, 0, 93, 0.178) 0%, rgba(1, 3, 64, 0.171) 100%);
@@ -225,4 +215,3 @@ nav {
     
 }
   
->>>>>>> 49719a4059ff5ffea679442976f729798ff4d4f4
