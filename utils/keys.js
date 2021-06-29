@@ -1,8 +1,10 @@
-router.get('/login',(req,res) => {
+router.get('login',(req,res) => {
+    //passport 
     res.send('login'); 
   })
   
-  router.get('/logout',(req,res) => {
+  router.get('logout',(req,res) => {
+    //passport 
     res.send('logout'); 
   })
   
@@ -17,4 +19,14 @@ router.get('/login',(req,res) => {
       res.redirect('/');
     });
   
- 
+  //Google 
+  app.get('/auth/google',
+    passport.authenticate('google', { 
+      scope: ['profile'] }));
+  
+  app.get('/auth/google/callback', 
+    passport.authenticate('google', { failureRedirect: '/login' }),
+    function(req, res) {
+      // Successful authentication, redirect home.
+      res.redirect('/');
+    });
