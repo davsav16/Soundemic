@@ -194,6 +194,7 @@ nav {
     margin: auto;
     margin-top: 25px;
     padding: 10px 28px;
+
 }
 
 
@@ -265,6 +266,15 @@ nav {
 .container-btn {
     margin-top: 5rem;
     margin-bottom: 5rem;
+}
+
+
+.post-content {
+    margin-bottom: 15px;
+    width: 100%;
+    color: white;
+    padding: 10px;
+
 }
 
 

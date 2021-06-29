@@ -1,6 +1,6 @@
 async function signupFormHandler(event) {
     event.preventDefault();
-  
+
     console.log('sign-up btn pressed');
 
     const firstName = document.querySelector('#first-name-signup').value.trim();
@@ -9,7 +9,7 @@ async function signupFormHandler(event) {
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
     const musicGenre = document.querySelector('#genre-signup').value.trim();
-  
+
     if (firstName && lastName && bio && email && password && musicGenre) {
         fetch('/api/users', {
             method: 'POST',
