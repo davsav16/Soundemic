@@ -216,6 +216,7 @@ nav {
 .modal-sign-in, .modal-sign-up {
     display: none;
 }
+
 .post-content {
     margin-bottom: 15px;
     width: 100%;
@@ -223,5 +224,4 @@ nav {
     padding: 10px;
 
 }
-
 
