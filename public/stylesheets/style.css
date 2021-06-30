@@ -3,6 +3,15 @@ body {
     background: radial-gradient(circle, rgba(0,0,93,1) 0%, rgba(0,0,0,1) 100%);
 }
 
+form {
+    background: rgb(0,0,93);
+    background: radial-gradient(circle, rgba(0,0,93,1) 0%, rgba(0,0,0,1) 100%);
+    width: 100%;; 
+    height: 100%;
+    padding: 20px;
+
+}
+
 .header {
     margin: auto;
 
@@ -42,7 +51,8 @@ body {
     background: linear-gradient(310deg, rgba(96,62,217,1) 0%, rgba(244,37,234,1) 53%, rgba(224,99,75,1) 100%);    border: none;
     border-radius: 25px 25px 0px 0px;
     width: 100%;
-    margin: auto;
+    height: 80%;
+    padding: 20px;
 }
 
 .container-btn {
@@ -56,6 +66,7 @@ h2 {
     font-style: normal;
     font-size: 20px;
     color:white;
+    margin-bottom: 20px;
 }
 
 h3 {
@@ -104,7 +115,7 @@ p {
     opacity: 70%;
     border-radius: 1.5rem;
     padding: 10px 28px;
-    width: 70%;
+    width: 80%;
     margin-top: 8px;
     margin-bottom: 5px;
 }
@@ -151,10 +162,11 @@ nav {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 55px;
+    height: 65px;
     display: flex;
     background: linear-gradient(310deg, rgba(96,62,217,1) 0%, rgba(244,37,234,1) 53%, rgba(224,99,75,1) 100%);    border: none;
     backdrop-filter: blur(10px);
+    box-shadow: -0px -10px rgb(0,0,93);
 }
 
 .nav-icon {
@@ -169,18 +181,50 @@ nav {
     border-radius: 1.5rem;
     width: 40%;
     margin: auto;
-    margin-top: 5px;
+    margin-top: 15px;
+    
+}
+
+.btn-confirm-post {
+    background: rgb(0,0,93);
+    background: linear-gradient(158deg, rgba(0,0,93,1) 0%, rgba(1,3,64,1) 100%);
+    color: white;
+    border-radius: 1.5rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+    padding: 10px 28px;
 
 }
 
-.modal-sign-in, .modal-sign-up, .modal-new-post {
-    display: none;
+
+.modal-new-post{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+.modal-sign-in, .modal-sign-up {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    margin: auto;
+    top: 30rem;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
 
 /* post styling */
 .post {
-
+    position: relative;
     background: linear-gradient(222deg, rgba(96,62,217,1) 0%, rgba(244,37,234,1) 60%);
     border-radius: 25px;
     width: 80%;
@@ -188,6 +232,17 @@ nav {
     justify-content: center;
     margin: auto;
     margin-bottom: 1rem;
+}
+
+.new-post {
+    position: relative;
+    background: linear-gradient(222deg, rgba(96,62,217,1) 0%, rgba(244,37,234,1) 60%);
+    border-radius: 25px;
+    top: 70px;
+    width: 80%;
+    height: 40%;
+    justify-content: center;
+    margin: auto;
 }
 
 .album {
@@ -213,9 +268,6 @@ nav {
     margin-bottom: 5rem;
 }
 
-.modal-sign-in, .modal-sign-up {
-    display: none;
-}
 
 .post-content {
     margin-bottom: 15px;
@@ -224,4 +276,5 @@ nav {
     padding: 10px;
 
 }
+
 
